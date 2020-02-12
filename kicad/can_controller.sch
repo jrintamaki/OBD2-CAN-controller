@@ -1,4 +1,366 @@
-EESchema Schematic File Version 2
-EELAYER 25 0
+EESchema Schematic File Version 4
+EELAYER 30 0
 EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L MCU_ST_STM32F1:STM32F105RCTx U?
+U 1 1 5E43B0C4
+P 6000 3850
+F 0 "U?" H 6000 1961 50  0000 C CNN
+F 1 "STM32F105RCTx" H 6000 1870 50  0000 C CNN
+F 2 "Package_QFP:LQFP-64_10x10mm_P0.5mm" H 5400 2150 50  0001 R CNN
+F 3 "http://www.st.com/st-web-ui/static/active/en/resource/technical/document/datasheet/CD00220364.pdf" H 6000 3850 50  0001 C CNN
+	1    6000 3850
+	1    0    0    -1  
+$EndComp
+$Comp
+L Interface_CAN_LIN:SN65HVD232 U?
+U 1 1 5E4417C4
+P 9450 4700
+F 0 "U?" H 9450 5181 50  0000 C CNN
+F 1 "SN65HVD232" H 9450 5090 50  0000 C CNN
+F 2 "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" H 9450 4200 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/sn65hvd230.pdf" H 9350 5100 50  0001 C CNN
+	1    9450 4700
+	1    0    0    -1  
+$EndComp
+$Comp
+L Interface_CAN_LIN:SN65HVD232 U?
+U 1 1 5E445DD3
+P 9450 3350
+F 0 "U?" H 9450 3831 50  0000 C CNN
+F 1 "SN65HVD232" H 9450 3740 50  0000 C CNN
+F 2 "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" H 9450 2850 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/sn65hvd230.pdf" H 9350 3750 50  0001 C CNN
+	1    9450 3350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9050 3350 6700 3350
+Wire Wire Line
+	9050 3250 7100 3250
+Wire Wire Line
+	7100 3250 7100 3450
+Wire Wire Line
+	7100 3450 6700 3450
+Wire Wire Line
+	9050 4700 8050 4700
+Wire Wire Line
+	8050 4700 8050 5150
+Wire Wire Line
+	8050 5150 6700 5150
+Wire Wire Line
+	9050 4600 7950 4600
+Wire Wire Line
+	7950 4600 7950 5250
+Wire Wire Line
+	7950 5250 6700 5250
+$Comp
+L power:+3V3 #PWR?
+U 1 1 5E452F65
+P 10250 2850
+F 0 "#PWR?" H 10250 2700 50  0001 C CNN
+F 1 "+3V3" H 10265 3023 50  0000 C CNN
+F 2 "" H 10250 2850 50  0001 C CNN
+F 3 "" H 10250 2850 50  0001 C CNN
+	1    10250 2850
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5E454028
+P 9450 5200
+F 0 "#PWR?" H 9450 4950 50  0001 C CNN
+F 1 "GND" H 9455 5027 50  0000 C CNN
+F 2 "" H 9450 5200 50  0001 C CNN
+F 3 "" H 9450 5200 50  0001 C CNN
+	1    9450 5200
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C?
+U 1 1 5E459C37
+P 9750 2900
+F 0 "C?" V 9521 2900 50  0000 C CNN
+F 1 "C_Small" V 9612 2900 50  0000 C CNN
+F 2 "" H 9750 2900 50  0001 C CNN
+F 3 "~" H 9750 2900 50  0001 C CNN
+	1    9750 2900
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	9450 3050 9450 2900
+Wire Wire Line
+	9450 2900 9650 2900
+Wire Wire Line
+	9850 2900 10250 2900
+Wire Wire Line
+	10250 2900 10250 2850
+Wire Wire Line
+	9450 4400 9450 4300
+$Comp
+L Regulator_Switching:LMR16006YQ U?
+U 1 1 5E45E8B6
+P 9450 1400
+F 0 "U?" H 9450 1867 50  0000 C CNN
+F 1 "LMR16006YQ" H 9450 1776 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-23-6" H 9450 900 50  0001 C CIN
+F 3 "http://www.ti.com/lit/ds/symlink/lmr16006y-q1.pdf" H 9050 1850 50  0001 C CNN
+	1    9450 1400
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR?
+U 1 1 5E45F1C0
+P 8250 900
+F 0 "#PWR?" H 8250 750 50  0001 C CNN
+F 1 "+5V" H 8265 1073 50  0000 C CNN
+F 2 "" H 8250 900 50  0001 C CNN
+F 3 "" H 8250 900 50  0001 C CNN
+	1    8250 900 
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:D_Small D?
+U 1 1 5E4603B8
+P 8250 1100
+F 0 "D?" V 8296 1032 50  0000 R CNN
+F 1 "D_Small" V 8205 1032 50  0000 R CNN
+F 2 "" V 8250 1100 50  0001 C CNN
+F 3 "~" V 8250 1100 50  0001 C CNN
+	1    8250 1100
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:C_Small C?
+U 1 1 5E46179E
+P 8600 1550
+F 0 "C?" H 8692 1596 50  0000 L CNN
+F 1 "C_Small" H 8692 1505 50  0000 L CNN
+F 2 "" H 8600 1550 50  0001 C CNN
+F 3 "~" H 8600 1550 50  0001 C CNN
+	1    8600 1550
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5E46288A
+P 9450 2050
+F 0 "#PWR?" H 9450 1800 50  0001 C CNN
+F 1 "GND" H 9455 1877 50  0000 C CNN
+F 2 "" H 9450 2050 50  0001 C CNN
+F 3 "" H 9450 2050 50  0001 C CNN
+	1    9450 2050
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5E462EEE
+P 8600 2000
+F 0 "#PWR?" H 8600 1750 50  0001 C CNN
+F 1 "GND" H 8605 1827 50  0000 C CNN
+F 2 "" H 8600 2000 50  0001 C CNN
+F 3 "" H 8600 2000 50  0001 C CNN
+	1    8600 2000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:L_Small L?
+U 1 1 5E4635DB
+P 10550 1400
+F 0 "L?" V 10735 1400 50  0000 C CNN
+F 1 "L_Small" V 10644 1400 50  0000 C CNN
+F 2 "" H 10550 1400 50  0001 C CNN
+F 3 "~" H 10550 1400 50  0001 C CNN
+	1    10550 1400
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:C_Small C?
+U 1 1 5E463F62
+P 10250 1250
+F 0 "C?" H 10342 1296 50  0000 L CNN
+F 1 "C_Small" H 10342 1205 50  0000 L CNN
+F 2 "" H 10250 1250 50  0001 C CNN
+F 3 "~" H 10250 1250 50  0001 C CNN
+	1    10250 1250
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C?
+U 1 1 5E464BE3
+P 10850 1550
+F 0 "C?" H 10942 1596 50  0000 L CNN
+F 1 "C_Small" H 10942 1505 50  0000 L CNN
+F 2 "" H 10850 1550 50  0001 C CNN
+F 3 "~" H 10850 1550 50  0001 C CNN
+	1    10850 1550
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3V3 #PWR?
+U 1 1 5E4654CA
+P 10850 950
+F 0 "#PWR?" H 10850 800 50  0001 C CNN
+F 1 "+3V3" H 10865 1123 50  0000 C CNN
+F 2 "" H 10850 950 50  0001 C CNN
+F 3 "" H 10850 950 50  0001 C CNN
+	1    10850 950 
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9450 5200 9450 5100
+$Comp
+L power:+3V3 #PWR?
+U 1 1 5E470F7C
+P 9000 4200
+F 0 "#PWR?" H 9000 4050 50  0001 C CNN
+F 1 "+3V3" H 9015 4373 50  0000 C CNN
+F 2 "" H 9000 4200 50  0001 C CNN
+F 3 "" H 9000 4200 50  0001 C CNN
+	1    9000 4200
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5E475292
+P 9450 3800
+F 0 "#PWR?" H 9450 3550 50  0001 C CNN
+F 1 "GND" H 9455 3627 50  0000 C CNN
+F 2 "" H 9450 3800 50  0001 C CNN
+F 3 "" H 9450 3800 50  0001 C CNN
+	1    9450 3800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9450 3750 9450 3800
+$Comp
+L Device:C_Small C?
+U 1 1 5E47F342
+P 9200 4300
+F 0 "C?" V 8971 4300 50  0000 C CNN
+F 1 "C_Small" V 9062 4300 50  0000 C CNN
+F 2 "" H 9200 4300 50  0001 C CNN
+F 3 "~" H 9200 4300 50  0001 C CNN
+	1    9200 4300
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	9000 4200 9000 4300
+Wire Wire Line
+	9000 4300 9100 4300
+Wire Wire Line
+	9300 4300 9450 4300
+$Comp
+L Device:D_Schottky_Small D?
+U 1 1 5E480816
+P 10300 1850
+F 0 "D?" V 10254 1918 50  0000 L CNN
+F 1 "D_Schottky_Small" V 10345 1918 50  0000 L CNN
+F 2 "" V 10300 1850 50  0001 C CNN
+F 3 "~" V 10300 1850 50  0001 C CNN
+	1    10300 1850
+	0    1    1    0   
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5E481D35
+P 10300 2050
+F 0 "#PWR?" H 10300 1800 50  0001 C CNN
+F 1 "GND" H 10305 1877 50  0000 C CNN
+F 2 "" H 10300 2050 50  0001 C CNN
+F 3 "" H 10300 2050 50  0001 C CNN
+	1    10300 2050
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5E4820BC
+P 10850 2050
+F 0 "#PWR?" H 10850 1800 50  0001 C CNN
+F 1 "GND" H 10855 1877 50  0000 C CNN
+F 2 "" H 10850 2050 50  0001 C CNN
+F 3 "" H 10850 2050 50  0001 C CNN
+	1    10850 2050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10450 1400 10300 1400
+Wire Wire Line
+	10250 1350 10250 1400
+Connection ~ 10250 1400
+Wire Wire Line
+	10250 1400 9950 1400
+Wire Wire Line
+	10250 1150 9950 1150
+Wire Wire Line
+	9950 1150 9950 1200
+Wire Wire Line
+	10850 1450 10850 1400
+Wire Wire Line
+	10650 1400 10750 1400
+Connection ~ 10850 1400
+Wire Wire Line
+	10850 1400 10850 950 
+Wire Wire Line
+	10850 1650 10850 2050
+Wire Wire Line
+	10300 2050 10300 1950
+Wire Wire Line
+	10300 1750 10300 1400
+Connection ~ 10300 1400
+Wire Wire Line
+	10300 1400 10250 1400
+Wire Wire Line
+	9950 1600 10750 1600
+Wire Wire Line
+	10750 1600 10750 1400
+Connection ~ 10750 1400
+Wire Wire Line
+	10750 1400 10850 1400
+Wire Wire Line
+	9450 2050 9450 1800
+Wire Wire Line
+	8600 2000 8600 1650
+Wire Wire Line
+	8250 1200 8600 1200
+Wire Wire Line
+	8250 900  8250 1000
+Wire Wire Line
+	8600 1450 8600 1200
+Connection ~ 8600 1200
+Wire Wire Line
+	8600 1200 8800 1200
+Wire Wire Line
+	8950 1400 8800 1400
+Wire Wire Line
+	8800 1400 8800 1200
+Connection ~ 8800 1200
+Wire Wire Line
+	8800 1200 8950 1200
+$Comp
+L Mechanical:MountingHole_Pad H?
+U 1 1 5E4963D0
+P 8000 1200
+F 0 "H?" V 8237 1203 50  0000 C CNN
+F 1 "MountingHole_Pad" V 8146 1203 50  0000 C CNN
+F 2 "" H 8000 1200 50  0001 C CNN
+F 3 "~" H 8000 1200 50  0001 C CNN
+	1    8000 1200
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	8100 1200 8250 1200
+Connection ~ 8250 1200
 $EndSCHEMATC
