@@ -865,4 +865,136 @@ Wire Wire Line
 Wire Wire Line
 	6200 6050 6100 6050
 Connection ~ 6100 6050
+$Comp
+L Connector:Conn_01x07_Female J?
+U 1 1 5E461B75
+P 3250 4700
+F 0 "J?" H 3278 4726 50  0000 L CNN
+F 1 "Header for SIM800L" H 3278 4635 50  0000 L CNN
+F 2 "" H 3250 4700 50  0001 C CNN
+F 3 "~" H 3250 4700 50  0001 C CNN
+	1    3250 4700
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5E47C6F5
+P 3650 5200
+F 0 "#PWR?" H 3650 4950 50  0001 C CNN
+F 1 "GND" H 3655 5027 50  0000 C CNN
+F 2 "" H 3650 5200 50  0001 C CNN
+F 3 "" H 3650 5200 50  0001 C CNN
+	1    3650 5200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3450 4900 3650 4900
+Wire Wire Line
+	3650 4900 3650 5200
+$Comp
+L power:+5V #PWR?
+U 1 1 5E489670
+P 3750 4150
+F 0 "#PWR?" H 3750 4000 50  0001 C CNN
+F 1 "+5V" H 3765 4323 50  0000 C CNN
+F 2 "" H 3750 4150 50  0001 C CNN
+F 3 "" H 3750 4150 50  0001 C CNN
+	1    3750 4150
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3V3 #PWR?
+U 1 1 5E489DD7
+P 4050 4150
+F 0 "#PWR?" H 4050 4000 50  0001 C CNN
+F 1 "+3V3" H 4065 4323 50  0000 C CNN
+F 2 "" H 4050 4150 50  0001 C CNN
+F 3 "" H 4050 4150 50  0001 C CNN
+	1    4050 4150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3450 4400 3750 4400
+Wire Wire Line
+	3750 4400 3750 4150
+Wire Wire Line
+	3450 4500 3650 4500
+Wire Wire Line
+	3650 4500 3650 4900
+Connection ~ 3650 4900
+Wire Wire Line
+	3450 4600 4050 4600
+Wire Wire Line
+	4050 4600 4050 4150
+$Comp
+L Connector:Conn_01x04_Male J?
+U 1 1 5E4AB493
+P 7900 3750
+F 0 "J?" H 8008 4031 50  0000 C CNN
+F 1 "Programming conn" H 8008 3940 50  0000 C CNN
+F 2 "" H 7900 3750 50  0001 C CNN
+F 3 "~" H 7900 3750 50  0001 C CNN
+	1    7900 3750
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	7700 3650 7050 3650
+Wire Wire Line
+	7050 3650 7050 3550
+Wire Wire Line
+	7050 3550 6700 3550
+Wire Wire Line
+	6900 3750 6900 3650
+Wire Wire Line
+	6900 3650 6700 3650
+$Comp
+L power:+3V3 #PWR?
+U 1 1 5E4EC5D6
+P 7550 3550
+F 0 "#PWR?" H 7550 3400 50  0001 C CNN
+F 1 "+3V3" H 7565 3723 50  0000 C CNN
+F 2 "" H 7550 3550 50  0001 C CNN
+F 3 "" H 7550 3550 50  0001 C CNN
+	1    7550 3550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7700 3550 7550 3550
+$Comp
+L power:GND #PWR?
+U 1 1 5E4F3FB2
+P 7300 3900
+F 0 "#PWR?" H 7300 3650 50  0001 C CNN
+F 1 "GND" H 7305 3727 50  0000 C CNN
+F 2 "" H 7300 3900 50  0001 C CNN
+F 3 "" H 7300 3900 50  0001 C CNN
+	1    7300 3900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7700 3850 7300 3850
+Wire Wire Line
+	7300 3850 7300 3900
+Wire Wire Line
+	7700 3750 6900 3750
+Text Label 7400 3750 0    50   ~ 0
+SWCLK
+Text Label 7400 3650 0    50   ~ 0
+SWDIO
+Text Label 3500 4700 0    50   ~ 0
+TX
+Text Label 3500 4800 0    50   ~ 0
+RX
+Wire Wire Line
+	4800 4800 4800 4950
+Wire Wire Line
+	4800 4950 5300 4950
+Wire Wire Line
+	3450 4800 4800 4800
+Wire Wire Line
+	4750 4700 4750 5050
+Wire Wire Line
+	4750 5050 5300 5050
+Wire Wire Line
+	3450 4700 4750 4700
 $EndSCHEMATC
