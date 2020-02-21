@@ -997,4 +997,55 @@ Wire Wire Line
 	4750 5050 5300 5050
 Wire Wire Line
 	3450 4700 4750 4700
+Text GLabel 1950 6950 0    50   BiDi ~ 0
+CAN_MS_H
+Text GLabel 2450 6950 2    50   BiDi ~ 0
+CAN_MS_L
+Text GLabel 1950 7250 0    50   BiDi ~ 0
+CAN_HS_H
+Text GLabel 2450 7250 2    50   BiDi ~ 0
+CAN_HS_L
+$Comp
+L power:GND #PWR?
+U 1 1 5E4CE02E
+P 1450 7050
+F 0 "#PWR?" H 1450 6800 50  0001 C CNN
+F 1 "GND" V 1450 6850 50  0000 C CNN
+F 2 "" H 1450 7050 50  0001 C CNN
+F 3 "" H 1450 7050 50  0001 C CNN
+	1    1450 7050
+	0    1    1    0   
+$EndComp
+Text GLabel 2450 7450 2    50   Input ~ 0
+12V
+Wire Wire Line
+	1450 7050 1950 7050
+$Comp
+L Connector_Generic:Conn_02x08_Top_Bottom J?
+U 1 1 5E4885F7
+P 2150 7050
+F 0 "J?" H 2200 7567 50  0000 C CNN
+F 1 "OBD-II Connector" H 2200 7476 50  0000 C CNN
+F 2 "" H 2150 7050 50  0001 C CNN
+F 3 "~" H 2150 7050 50  0001 C CNN
+	1    2150 7050
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GNDS #PWR?
+U 1 1 5E564AF3
+P 1450 7150
+F 0 "#PWR?" H 1450 6900 50  0001 C CNN
+F 1 "GNDS" V 1500 6950 50  0000 C CNN
+F 2 "" H 1450 7150 50  0001 C CNN
+F 3 "" H 1450 7150 50  0001 C CNN
+	1    1450 7150
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	1450 7150 1950 7150
+Text GLabel 1950 7450 0    50   BiDi ~ 0
+TRANSMISSION_CONTROL_MODULE
+Text GLabel 2450 6750 2    50   BiDi ~ 0
+ABS_MODULE
 $EndSCHEMATC
