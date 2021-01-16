@@ -1,0 +1,5 @@
+(fp_lib_table
+  (lib (name Battery_holder)(type KiCad)(uri ${KIPRJMOD}/ul_BU2032SMJJGTR/KiCAD/2021-01-12_15-35-46/footprints.pretty)(options "")(descr ""))
+  (lib (name RGB_LED)(type KiCad)(uri ${KIPRJMOD}/ul_HV5RGB60/KiCAD/2021-01-12_15-47-57/footprints.pretty)(options "")(descr ""))
+  (lib (name buttoni)(type KiCad)(uri C:/Users/Julius/Documents/Koulu/OBD2-CAN-controller/kicad/TL3305AF260QG)(options "")(descr ""))
+)
